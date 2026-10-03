@@ -1,0 +1,6 @@
+{
+  "name": "Little Noor Montessori School, Bhuj",
+  "description": "Montessori learning that nurtures curiosity, confidence, and joyful growth. Classes from Play group to Sr. Kg in Bhuj.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

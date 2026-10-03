@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none">
+  <!-- Little Noor Montessori School Favicon -->
+  <circle cx="250" cy="250" r="230" fill="#FFFDF9" stroke="#DFC6A0" stroke-width="12" />
+  <circle cx="250" cy="250" r="195" stroke="#8E9963" stroke-width="6" />
+
+  <!-- Crescent & Star -->
+  <path d="M246 112 C242 124, 248 136, 260 139 C253 143, 241 141, 236 131 C231 121, 235 113, 246 112 Z" fill="#3D757B" />
+  <polygon points="259,122 261,126 266,127 262,130 263,135 259,132 255,135 256,130 252,127 257,126" fill="#3D757B" />
+
+  <!-- Islamic Geometric Star -->
+  <polygon points="250,146 258,166 278,162 268,178 284,192 265,198 272,218 250,208 228,218 235,198 216,192 232,178 222,162 242,166" 
+    fill="#D7B563" stroke="#96772D" stroke-width="3" stroke-linejoin="round" />
+  <polygon points="250,154 260,172 278,175 264,188 272,206 250,198 228,206 236,188 222,175 240,172" 
+    fill="#3D757B" stroke="#255157" stroke-width="3" stroke-linejoin="round" />
+  <polygon points="250,165 256,176 268,177 259,186 263,198 250,192 237,198 241,186 232,177 244,176" 
+    fill="#FFF0C7" stroke="#C5A059" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- Open Book -->
+  <path d="M174 278 Q250 288 326 278 C318 285 285 292 250 286 C215 292 182 285 174 278 Z" fill="#3D757B" />
+  <path d="M172 275 C186 255, 222 245, 250 262 C250 274, 250 284, 250 284 C222 272, 185 273, 172 275 Z" fill="#FFFDF6" stroke="#C5A059" stroke-width="3" />
+  <path d="M328 275 C314 255, 278 245, 250 262 C250 274, 250 284, 250 284 C278 272, 315 273, 328 275 Z" fill="#FFFDF6" stroke="#C5A059" stroke-width="3" />
+
+  <!-- Handprints -->
+  <ellipse cx="115" cy="275" rx="20" ry="18" fill="#4B7094" />
+  <ellipse cx="385" cy="275" rx="20" ry="18" fill="#4B7094" />
+
+  <!-- Typography -->
+  <text x="250" y="345" text-anchor="middle" fill="#4A6F91" font-family="system-ui, sans-serif" font-weight="800" font-size="44" letter-spacing="2">LITTLE NOOR</text>
+  <text x="250" y="375" text-anchor="middle" fill="#888147" font-family="system-ui, sans-serif" font-weight="700" font-size="19" letter-spacing="4">MONTESSORI</text>
+</svg>

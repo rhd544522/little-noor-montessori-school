@@ -1,0 +1,556 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------
+   Leaves & Growth Theme Variables & Tailwind Config
+---------------------------------------------------- */
+@theme {
+  --color-growth-forest: #1E3A2B;
+  --color-growth-sage: #9CAF88;
+  --color-growth-mint: #E2E8E0;
+  --color-growth-cream: #FAF8F1;
+
+  --color-leaves-primary: #1E3A2B;
+  --color-leaves-secondary: #9CAF88;
+  --color-leaves-surface: #E2E8E0;
+  --color-leaves-background: #FAF8F1;
+
+  --font-sans: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+
+  --radius-organic: 20px;
+  --radius-pill: 999px;
+
+  --shadow-organic: 0 10px 30px rgba(30, 58, 43, 0.08);
+
+  --ease-organic: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  /* Leaves & Growth palette */
+  --forest: #1E3A2B;
+  --sage: #9CAF88;
+  --mint: #E2E8E0;
+
+  /* Supporting neutrals */
+  --cream: #FAF8F1;
+  --white: #FFFFFF;
+  --text-muted: #5F6B61;
+
+  /* UI specifications */
+  --border-soft: rgba(30, 58, 43, 0.14);
+  --shadow-soft: 0 10px 30px rgba(30, 58, 43, 0.08);
+  --radius-card: 20px;
+  --radius-button: 999px;
+
+  /* Fonts */
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--cream);
+    color: var(--forest);
+    font-family: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    color: var(--forest);
+  }
+}
+
+/* ----------------------------------------------------
+   Leaves & Growth Custom Utility Classes
+---------------------------------------------------- */
+.btn-sage {
+  background: var(--sage);
+  color: var(--forest);
+  border: 1px solid var(--sage);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-sage:hover {
+  background: var(--mint);
+  border-color: var(--forest);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--forest);
+  border: 1px solid var(--sage);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--mint);
+}
+
+.growth-card {
+  background: var(--mint);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
+}
+
+.growth-card:hover {
+  background: #dce4da;
+  transform: translateY(-3px);
+}
+
+.growth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  color: var(--forest);
+  background: rgba(156, 175, 136, 0.15);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'DM Sans', 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Soft Botanical Shadows */
+.shadow-botanical-xs {
+  box-shadow: 0 2px 8px -1px rgba(30, 58, 43, 0.05);
+}
+
+.shadow-botanical-sm {
+  box-shadow: 0 4px 16px -2px rgba(30, 58, 43, 0.06);
+}
+
+.shadow-botanical-md {
+  box-shadow: 0 10px 28px -4px rgba(30, 58, 43, 0.08), 0 2px 8px -1px rgba(156, 175, 136, 0.06);
+}
+
+.shadow-botanical-lg {
+  box-shadow: 0 20px 40px -8px rgba(30, 58, 43, 0.12), 0 6px 16px -2px rgba(156, 175, 136, 0.08);
+}
+
+/* Backward-compatible luxury aliases */
+.shadow-luxury-xs {
+  box-shadow: 0 2px 8px -1px rgba(30, 58, 43, 0.05);
+}
+.shadow-luxury-sm {
+  box-shadow: 0 4px 16px -2px rgba(30, 58, 43, 0.06);
+}
+.shadow-luxury-md {
+  box-shadow: 0 10px 28px -4px rgba(30, 58, 43, 0.08);
+}
+.shadow-luxury-lg {
+  box-shadow: 0 20px 40px -8px rgba(30, 58, 43, 0.12);
+}
+
+/* Floating leaf animation */
+@keyframes floatLeaf {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+.animate-float-leaf {
+  animation: floatLeaf 6s ease-in-out infinite;
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+/* Storybook / Announcement Marquee Ticker */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-paused {
+  animation-play-state: paused !important;
+}
+
+/* ----------------------------------------------------
+   Living Background Ambient Drift Keyframes
+---------------------------------------------------- */
+@keyframes ambientDrift1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(25px, -20px) scale(1.04);
+  }
+  66% {
+    transform: translate(-15px, 20px) scale(0.97);
+  }
+}
+
+@keyframes ambientDrift2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-20px, 25px) scale(1.05);
+  }
+  66% {
+    transform: translate(20px, -15px) scale(0.96);
+  }
+}
+
+@keyframes ambientDrift3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-25px, -15px) scale(1.06);
+  }
+}
+
+@keyframes slowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+.animate-ambient-drift-1 {
+  animation: ambientDrift1 24s ease-in-out infinite;
+}
+
+.animate-ambient-drift-2 {
+  animation: ambientDrift2 28s ease-in-out infinite;
+}
+
+.animate-ambient-drift-3 {
+  animation: ambientDrift3 22s ease-in-out infinite;
+}
+
+.animate-slow-rotate {
+  animation: slowRotate 70s linear infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 6s ease-in-out infinite;
+}
+
+/* Smooth HTML scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-ambient-drift-1,
+  .animate-ambient-drift-2,
+  .animate-ambient-drift-3,
+  .animate-slow-rotate,
+  .animate-gentle-pulse,
+  .animate-float-leaf,
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+/* ----------------------------------------------------
+   Night Garden / Premium Dark Mode Theme System
+---------------------------------------------------- */
+html.dark {
+  color-scheme: dark;
+  --forest: #FAF8F1;
+  --sage: #A7BE98;
+  --mint: #172C20;
+  --cream: #0D1912;
+  --white: #14261C;
+  --text-muted: #A3B5A1;
+  --border-soft: rgba(167, 190, 152, 0.22);
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+html.dark body {
+  background-color: #0D1912 !important;
+  color: #FAF8F1 !important;
+}
+
+/* Background layers */
+html.dark .bg-\[\#FAF8F1\],
+html.dark [class*="bg-[#FAF8F1]"] {
+  background-color: #0D1912 !important;
+}
+
+html.dark .bg-\[\#FAF8F1\]\/95,
+html.dark .bg-\[\#FAF8F1\]\/90,
+html.dark .bg-\[\#FAF8F1\]\/85,
+html.dark .bg-\[\#FAF8F1\]\/80,
+html.dark .bg-\[\#FAF8F1\]\/60 {
+  background-color: rgba(13, 25, 18, 0.95) !important;
+}
+
+html.dark .bg-\[\#E2E8E0\],
+html.dark [class*="bg-[#E2E8E0]"] {
+  background-color: #172C20 !important;
+}
+
+html.dark .bg-\[\#E2E8E0\]\/60,
+html.dark .bg-\[\#E2E8E0\]\/50,
+html.dark .bg-\[\#E2E8E0\]\/40 {
+  background-color: rgba(23, 44, 32, 0.6) !important;
+}
+
+html.dark .bg-white {
+  background-color: #14261C !important;
+}
+
+html.dark .bg-white\/85,
+html.dark .bg-white\/80,
+html.dark .bg-white\/90,
+html.dark .bg-white\/95 {
+  background-color: rgba(20, 38, 28, 0.9) !important;
+}
+
+html.dark .bg-stone-50,
+html.dark .bg-stone-100 {
+  background-color: #14261C !important;
+}
+
+/* Primary text & titles */
+html.dark .text-\[\#1E3A2B\],
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark .font-serif-luxury {
+  color: #FAF8F1 !important;
+}
+
+html.dark .text-\[\#1E3A2B\]\/90 {
+  color: rgba(250, 248, 241, 0.92) !important;
+}
+html.dark .text-\[\#1E3A2B\]\/85 {
+  color: rgba(250, 248, 241, 0.88) !important;
+}
+html.dark .text-\[\#1E3A2B\]\/80 {
+  color: rgba(250, 248, 241, 0.82) !important;
+}
+html.dark .text-\[\#1E3A2B\]\/75 {
+  color: rgba(250, 248, 241, 0.78) !important;
+}
+html.dark .text-\[\#1E3A2B\]\/70 {
+  color: rgba(250, 248, 241, 0.72) !important;
+}
+html.dark .text-\[\#1E3A2B\]\/60 {
+  color: rgba(250, 248, 241, 0.65) !important;
+}
+
+html.dark .text-stone-900,
+html.dark .text-stone-800,
+html.dark .text-stone-700,
+html.dark .text-stone-600 {
+  color: #D2DDD0 !important;
+}
+
+html.dark .text-stone-500,
+html.dark .text-stone-400 {
+  color: #A3B5A1 !important;
+}
+
+/* Buttons */
+html.dark .btn-sage {
+  background: #254633;
+  color: #FAF8F1;
+  border-color: #9CAF88;
+}
+
+html.dark .btn-sage:hover {
+  background: #2E563F;
+  border-color: #FAF8F1;
+}
+
+html.dark .btn-outline {
+  color: #FAF8F1;
+  border-color: #9CAF88;
+}
+
+html.dark .btn-outline:hover {
+  background: #172C20;
+}
+
+/* Primary Dark Buttons (CTA) */
+html.dark button.bg-\[\#1E3A2B\],
+html.dark a.bg-\[\#1E3A2B\] {
+  background-color: #224330 !important;
+  color: #FAF8F1 !important;
+  border: 1px solid rgba(156, 175, 136, 0.45) !important;
+}
+
+html.dark button.bg-\[\#1E3A2B\]:hover,
+html.dark a.bg-\[\#1E3A2B\]:hover {
+  background-color: #2B523B !important;
+  border-color: #9CAF88 !important;
+}
+
+/* Inputs, Selects, Textareas */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #172C20 !important;
+  color: #FAF8F1 !important;
+  border-color: rgba(156, 175, 136, 0.35) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: rgba(250, 248, 241, 0.45) !important;
+}
+
+html.dark input:focus,
+html.dark select:focus,
+html.dark textarea:focus {
+  border-color: #9CAF88 !important;
+  box-shadow: 0 0 0 2px rgba(156, 175, 136, 0.3) !important;
+}
+
+/* Borders */
+html.dark .border-\[\#9CAF88\]\/20,
+html.dark .border-\[\#9CAF88\]\/30,
+html.dark .border-\[\#9CAF88\]\/40,
+html.dark .border-\[\#1E3A2B\]\/20,
+html.dark .border-stone-200,
+html.dark .border-stone-300 {
+  border-color: rgba(156, 175, 136, 0.25) !important;
+}
+
+/* Cards & Modals */
+html.dark .growth-card {
+  background: #14261C;
+  border-color: rgba(156, 175, 136, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+html.dark .growth-card:hover {
+  background: #182E22;
+}
+
+html.dark .growth-badge {
+  color: #FAF8F1;
+  background: rgba(156, 175, 136, 0.2);
+  border-color: #9CAF88;
+}
+
+/* Organic Section Dividers in Dark Mode */
+html.dark .text-\[\#FAF8F1\] {
+  color: #0D1912 !important;
+}
+
+/* Maintain proper contrast on specific white badges / pills in dark mode */
+html.dark .rounded-full.bg-white,
+html.dark .rounded-3xl.bg-white,
+html.dark .rounded-2xl.bg-white {
+  background-color: #14261C !important;
+  border-color: rgba(156, 175, 136, 0.3) !important;
+}
+
+/* Header floating navbar in dark mode */
+html.dark nav .bg-white\/85 {
+  background-color: rgba(20, 38, 28, 0.88) !important;
+  border-color: rgba(156, 175, 136, 0.35) !important;
+}
+
+/* Ensure school emblem circular backdrop stays clean and authentic */
+html.dark .school-logo-badge,
+html.dark [title*="Little Noor"] .rounded-full,
+html.dark [alt*="Little Noor"] {
+  background-color: #FFFFFF !important;
+}
+
+/* Admin portal table styling in dark mode */
+html.dark table thead th {
+  background-color: #172C20 !important;
+  color: #FAF8F1 !important;
+}
+
+html.dark table tbody tr {
+  border-color: rgba(156, 175, 136, 0.2) !important;
+}
+
+html.dark table tbody tr:hover {
+  background-color: rgba(156, 175, 136, 0.08) !important;
+}
+
+/* Subtle shadows in dark mode */
+html.dark .shadow-botanical-md,
+html.dark .shadow-botanical-lg {
+  box-shadow: 0 14px 40px -4px rgba(0, 0, 0, 0.65), 0 2px 10px -1px rgba(156, 175, 136, 0.12) !important;
+}
+

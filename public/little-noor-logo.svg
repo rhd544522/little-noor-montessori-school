@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none">
+  <!-- Little Noor Montessori School Official Emblem -->
+  
+  <!-- Outer Circular Wreath Vine -->
+  <circle cx="250" cy="250" r="186" stroke="#9EA872" stroke-width="2.5" stroke-dasharray="8 3" opacity="0.65" />
+  <circle cx="250" cy="250" r="184" stroke="#8E9963" stroke-width="2" />
+  
+  <!-- Foliage / Leaves / Flowers on Wreath -->
+  <g id="wreath-details">
+    <!-- Top-left leaves & blossoms -->
+    <path d="M190 76 C180 72, 172 82, 178 92 C186 94, 194 86, 190 76 Z" fill="#9FB57F" />
+    <path d="M165 98 C154 94, 146 104, 153 114 C161 116, 169 108, 165 98 Z" fill="#84A164" />
+    <!-- Blue petal/leaf -->
+    <path d="M178 122 C168 116, 160 126, 166 136 C176 138, 184 130, 178 122 Z" fill="#8DA6BE" />
+    <!-- Yellow flower / fruit bud -->
+    <circle cx="138" cy="154" r="9" fill="#D7BE58" />
+    <circle cx="143" cy="151" r="5" fill="#E2C969" />
+    <path d="M148 144 C152 140, 156 142, 155 146 Z" fill="#7D995C" />
+    <!-- Mid-left leaves -->
+    <path d="M112 216 C102 212, 98 224, 106 232 C114 234, 120 226, 112 216 Z" fill="#9FB57F" />
+    <path d="M125 198 C116 192, 110 202, 118 210 C126 212, 132 204, 125 198 Z" fill="#83A063" />
+    <circle cx="100" cy="255" r="7.5" fill="#D7BE58" />
+
+    <!-- Top stars -->
+    <polygon points="214,107 217,112 223,113 218,117 220,123 214,119 209,123 211,117 206,113 212,112" fill="#D1AC52" />
+    <polygon points="268,88 270,92 275,93 271,96 272,101 268,98 264,101 265,96 261,93 266,92" fill="#9BA2A6" />
+    
+    <!-- Top-right blossoms & leaves -->
+    <path d="M292 90 C290 80, 302 74, 310 82 C312 90, 302 98, 292 90 Z" fill="#8DA6BE" />
+    <path d="M324 105 C320 95, 332 90, 340 98 C342 106, 334 113, 324 105 Z" fill="#9FB57F" />
+    <!-- Blue 5-point star on wreath top-right -->
+    <polygon points="378,142 384,149 394,149 386,155 389,165 380,159 371,165 374,155 366,149 376,149" fill="#5077A2" />
+    <polygon points="353,138 355,142 360,143 356,146 357,151 353,148 349,151 350,146 346,143 351,142" fill="#C9A354" />
+
+    <!-- Right side leaves & blossoms -->
+    <path d="M386 182 C382 174, 394 168, 402 176 C404 184, 396 190, 386 182 Z" fill="#9FB57F" />
+    <path d="M400 200 C394 192, 404 186, 412 194 C414 202, 408 208, 400 200 Z" fill="#84A164" />
+    <polygon points="410,218 412,222 416,223 413,226 414,230 410,228 407,230 408,226 405,223 409,222" fill="#D1AC52" />
+    <path d="M405 240 C398 234, 408 228, 415 235 C416 242, 411 247, 405 240 Z" fill="#7E9B5F" />
+    <path d="M410 262 C406 254, 418 248, 424 256 C426 264, 418 270, 410 262 Z" fill="#D5BD5B" />
+
+    <!-- Bottom-right stars & foliage -->
+    <polygon points="392,328 398,333 406,334 399,340 401,348 394,343 387,347 389,339 382,334 391,333" fill="#D6B858" />
+    <polygon points="350,373 352,377 356,378 353,381 354,385 350,383 347,385 348,381 345,378 349,377" fill="#C7A352" />
+    <path d="M362 360 C354 354, 362 344, 370 350 C374 358, 368 366, 362 360 Z" fill="#84A164" />
+    <path d="M356 376 C350 372, 356 364, 363 368 C366 374, 361 380, 356 376 Z" fill="#9FB57F" />
+
+    <!-- Bottom center foliage & stars -->
+    <path d="M272 408 C266 400, 276 394, 282 401 C284 408, 278 414, 272 408 Z" fill="#84A164" />
+    <circle cx="270" cy="422" r="8" fill="#D5BD5B" />
+    <polygon points="305,396 311,402 320,402 312,408 315,417 307,411 299,416 302,407 295,402 304,401" fill="#5077A2" />
+    <polygon points="238,405 239,409 243,410 240,412 241,416 238,414 235,416 236,412 233,410 237,409" fill="#D7BE58" />
+    
+    <!-- Bottom-left leaves & blossoms -->
+    <path d="M210 404 C204 396, 214 388, 222 396 C222 404, 216 410, 210 404 Z" fill="#97B1C8" />
+    <polygon points="128,335 134,341 143,341 136,347 138,356 131,350 124,355 126,346 119,341 128,340" fill="#D6B858" />
+    <polygon points="152,357 154,361 158,362 155,365 156,369 152,367 149,369 150,365 147,362 151,361" fill="#C9A354" />
+    <path d="M152 376 C144 370, 150 360, 158 366 C162 374, 158 382, 152 376 Z" fill="#84A164" />
+  </g>
+
+  <!-- Islamic Geometric Motif (The Noor / Divine Light) & Crescent -->
+  <g id="central-noor-motif">
+    <!-- Crescent Moon & Star atop the Noor medallion -->
+    <path d="M246 112 C242 124, 248 136, 260 139 C253 143, 241 141, 236 131 C231 121, 235 113, 246 112 Z" fill="#3D757B" />
+    <polygon points="259,122 261,126 266,127 262,130 263,135 259,132 255,135 256,130 252,127 257,126" fill="#3D757B" />
+
+    <!-- Outer Geometric 8-pointed star in Gold & Teal -->
+    <!-- Gold faceted rays -->
+    <polygon points="250,146 258,166 278,162 268,178 284,192 265,198 272,218 250,208 228,218 235,198 216,192 232,178 222,162 242,166" 
+      fill="#D7B563" stroke="#96772D" stroke-width="1.5" stroke-linejoin="round" />
+    
+    <!-- Interlaced Teal Geometric Star Structure -->
+    <polygon points="250,154 260,172 278,175 264,188 272,206 250,198 228,206 236,188 222,175 240,172" 
+      fill="#3D757B" stroke="#255157" stroke-width="1.5" stroke-linejoin="round" />
+
+    <!-- Inner Golden Star Core -->
+    <polygon points="250,165 256,176 268,177 259,186 263,198 250,192 237,198 241,186 232,177 244,176" 
+      fill="#FFF0C7" stroke="#C5A059" stroke-width="1.5" stroke-linejoin="round" />
+    
+    <!-- Inner Central Hexagram / Star in Teal -->
+    <polygon points="250,173 254,180 262,182 256,188 258,196 250,192 242,196 244,188 238,182 246,180" 
+      fill="#3A6F75" />
+  </g>
+
+  <!-- Open Book of Knowledge -->
+  <g id="open-book">
+    <!-- Bottom Cover / Spine Curve in soft Teal -->
+    <path d="M174 278 Q250 288 326 278 C318 285 285 292 250 286 C215 292 182 285 174 278 Z" fill="#3D757B" />
+    
+    <!-- Left Open Page Block -->
+    <path d="M172 275 C186 255, 222 245, 250 262 C250 274, 250 284, 250 284 C222 272, 185 273, 172 275 Z" 
+      fill="#FFFDF6" stroke="#E6D6B8" stroke-width="1.5" />
+    
+    <!-- Right Open Page Block -->
+    <path d="M328 275 C314 255, 278 245, 250 262 C250 274, 250 284, 250 284 C278 272, 315 273, 328 275 Z" 
+      fill="#FFFDF6" stroke="#E6D6B8" stroke-width="1.5" />
+
+    <!-- Page Layers / Texture Lines on Left Page -->
+    <path d="M182 268 C198 256, 224 250, 246 261" stroke="#DFCBB1" stroke-width="1.5" fill="none" />
+    <path d="M188 262 C204 252, 226 248, 244 256" stroke="#E6D7C2" stroke-width="1.2" fill="none" />
+
+    <!-- Page Layers / Texture Lines on Right Page -->
+    <path d="M318 268 C302 256, 276 250, 254 261" stroke="#DFCBB1" stroke-width="1.5" fill="none" />
+    <path d="M312 262 C296 252, 274 248, 256 256" stroke="#E6D7C2" stroke-width="1.2" fill="none" />
+  </g>
+
+  <!-- Children's Little Handprints on Both Flanks -->
+  <g id="handprints" fill="#4B7094">
+    <!-- Left Handprint -->
+    <g transform="translate(82, 272) rotate(-8)">
+      <!-- Palm -->
+      <path d="M18 20 C18 28, 28 36, 36 34 C42 32, 44 24, 42 17 C38 10, 24 10, 18 20 Z" />
+      <!-- Thumb -->
+      <ellipse cx="43" cy="22" rx="4.5" ry="7" transform="rotate(35 43 22)" />
+      <!-- Index finger -->
+      <ellipse cx="36" cy="7" rx="3.8" ry="7.5" transform="rotate(15 36 7)" />
+      <!-- Middle finger -->
+      <ellipse cx="27" cy="4" rx="3.8" ry="8" />
+      <!-- Ring finger -->
+      <ellipse cx="19" cy="7" rx="3.6" ry="7" transform="rotate(-15 19 7)" />
+      <!-- Little finger -->
+      <ellipse cx="13" cy="13" rx="3.2" ry="5.8" transform="rotate(-30 13 13)" />
+    </g>
+
+    <!-- Right Handprint -->
+    <g transform="translate(372, 268) rotate(8)">
+      <!-- Palm -->
+      <path d="M38 20 C38 28, 28 36, 20 34 C14 32, 12 24, 14 17 C18 10, 32 10, 38 20 Z" />
+      <!-- Thumb -->
+      <ellipse cx="13" cy="22" rx="4.5" ry="7" transform="rotate(-35 13 22)" />
+      <!-- Index finger -->
+      <ellipse cx="20" cy="7" rx="3.8" ry="7.5" transform="rotate(-15 20 7)" />
+      <!-- Middle finger -->
+      <ellipse cx="29" cy="4" rx="3.8" ry="8" />
+      <!-- Ring finger -->
+      <ellipse cx="37" cy="7" rx="3.6" ry="7" transform="rotate(15 37 7)" />
+      <!-- Little finger -->
+      <ellipse cx="43" cy="13" rx="3.2" ry="5.8" transform="rotate(30 43 13)" />
+    </g>
+  </g>
+
+  <!-- School Name Typography -->
+  <!-- "LITTLE NOOR" -->
+  <text x="250" y="342" 
+    text-anchor="middle" 
+    fill="#4A6F91" 
+    font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" 
+    font-weight="800" 
+    font-size="41" 
+    letter-spacing="2.5">LITTLE NOOR</text>
+
+  <!-- "MONTESSORI SCHOOL" -->
+  <text x="250" y="372" 
+    text-anchor="middle" 
+    fill="#888147" 
+    font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" 
+    font-weight="700" 
+    font-size="18.5" 
+    letter-spacing="4.8">MONTESSORI SCHOOL</text>
+    
+  <!-- Tiny decorative star between the words -->
+  <polygon points="342,369 344,372 347,372 345,375 346,378 343,376 341,378 342,375 339,372 343,372" fill="#888147" opacity="0.8" />
+  <polygon points="158,369 160,372 163,372 161,375 162,378 159,376 157,378 158,375 155,372 159,372" fill="#888147" opacity="0.8" />
+</svg>
