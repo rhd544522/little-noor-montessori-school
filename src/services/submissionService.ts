@@ -54,7 +54,8 @@ function formatISTDate(): string {
 
 /**
  * Submits form data directly to Supabase using client credentials (VITE_SUPABASE_URL & VITE_SUPABASE_ANON_KEY)
- * and falls back to /api/submissions server endpoint if client-side credentials are not set.
+ * and falls back to the /api/submissions endpoint (Netlify Function) only if client-side credentials
+ * are not set or the browser cannot reach Supabase.
  *
  * Enforces strict honesty:
  *  - Only returns success after a confirmed, successful INSERT into Supabase.
@@ -108,13 +109,17 @@ export async function submitForm(payload: SubmissionPayload): Promise<Submission
   let clientInsertSuccess = false;
   let insertRes: any = null;
 
-  // 1. Attempt direct browser-to-Supabase insertion when credentials are present in Vite bundle
+  // 1. Primary path: direct browser-to-Supabase insertion using the public anon key (RLS-protected)
   if (clientCreds.isConfigured) {
     try {
       insertRes = await insertClientRecord('parent_enquiries', recordToInsert);
       clientInsertSuccess = true;
-    } catch {
-      // Seamlessly fall back to server-side endpoint
+    } catch (clientErr: any) {
+      // Only network-level failures (adblocker, CORS, offline) fall back to the server endpoint.
+      // Real database errors (RLS, constraints) would fail identically server-side, so surface them.
+      if (!clientErr?.isFetchError) {
+        throw clientErr;
+      }
     }
   }
 
@@ -136,13 +141,6 @@ export async function submitForm(payload: SubmissionPayload): Promise<Submission
     }\n\nParent Name: ${payload.parentName}\nPhone: ${payload.phone}\n${payload.date ? `Date: ${payload.date}\n` : ''}${payload.preferredSlot || payload.timeSlot ? `Slot: ${payload.preferredSlot || payload.timeSlot}\n` : ''}Details: ${childDetails || 'Submitted via website'}\nTimestamp: ${submissionTimestamp}`;
 
     const whatsappUrl = `https://wa.me/${SCHOOL_WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
-
-    // Non-blocking notification ping
-    fetch('/api/submissions', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...payload, request_type: requestType }),
-    }).catch(() => {});
 
     return {
       success: true,
@@ -170,7 +168,7 @@ export async function submitForm(payload: SubmissionPayload): Promise<Submission
     };
   }
 
-  // 2. Server-Side Supabase Insertion (always acts as robust primary bridge / reliable proxy)
+  // 2. Fallback: server-side insertion via /api/submissions (Netlify Function in production, Express in dev)
   try {
     const res = await fetch('/api/submissions', {
       method: 'POST',
@@ -183,7 +181,11 @@ export async function submitForm(payload: SubmissionPayload): Promise<Submission
     const data = await res.json().catch(() => ({}));
 
     if (!res.ok || !data.success) {
-      const rawError = data.error || `Submission failed with status ${res.status}`;
+      const rawError =
+        data.error ||
+        (res.status === 404
+          ? 'The enquiry service is temporarily unavailable. Please try again or contact us on WhatsApp.'
+          : `Submission failed with status ${res.status}`);
       console.error('❌ Supabase submission error:', rawError);
 
       if (rawError.toLowerCase().includes('violates row-level security') || rawError.includes('42501')) {
